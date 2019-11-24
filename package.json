@@ -1,0 +1,25 @@
+{
+  "name": "quiz-app-project",
+  "version": "1.0.0",
+  "description": "A web application built with node.js and react.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lauraleonilla/quiz-app-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lauraleonilla/quiz-app-project/issues"
+  },
+  "homepage": "https://github.com/lauraleonilla/quiz-app-project#readme"
+}
