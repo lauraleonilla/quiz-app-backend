@@ -4,13 +4,15 @@
   "description": "A web application built with node.js and react.",
   "main": "server.js",
   "dependencies": {
+    "eslint": "^6.7.2",
     "express": "^4.17.1",
     "nodemon": "^2.0.1"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
