@@ -4,6 +4,7 @@
   "description": "A web application built with node.js and react.",
   "main": "server.js",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "eslint": "^6.7.2",
     "express": "^4.17.1",
     "nodemon": "^2.0.1"
