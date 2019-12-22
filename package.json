@@ -4,12 +4,15 @@
   "description": "A web application built with node.js and react.",
   "main": "server.js",
   "dependencies": {
+    "bcrypt": "^3.0.7",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "eslint": "^6.7.2",
     "express": "^4.17.1",
     "http": "0.0.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.8.2",
+    "mongoose-unique-validator": "^2.0.3",
     "morgan": "^1.9.1",
     "nodemon": "^2.0.1"
   },

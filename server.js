@@ -6,6 +6,9 @@ const bodyParser = require('body-parser')
 const app = express()
 const config = require('./config')
 
+const userRouter = require('./routes/user')
+const loginRouter = require('./routes/login')
+
 console.log('connecting to', config.MONGODB_URI)
 
 mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -21,6 +24,9 @@ app.use(
   morgan(':method :url :status :response-time ms - :res[content-length] :body')
 )
 morgan.token('body', (req, res) => JSON.stringify(req.body))
+
+app.use('/api/user', userRouter)
+app.use('/api/login', loginRouter)
 
 app.get('/', (req, res) => res.send('Hello World!'))
 
