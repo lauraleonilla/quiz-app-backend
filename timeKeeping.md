@@ -6,4 +6,6 @@ Below the dates and number of hours worked.
 | 1.12   | 1      | Added linter, started with frontend jsx. | 
 | 21.12  | 4      | Started adding routes, implemented redux and added elements to the frontend. | 
 | 22.12  | ?      | IMPLEMENT DB | 
+| ?????  | ?      | IMPLEMENT LOGIN | 
+| ?????  | ?      | IMPLEMENT OAUTH | 
 | Total hours | 6 |              | 
