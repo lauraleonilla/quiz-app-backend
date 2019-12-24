@@ -7,3 +7,5 @@ The user registers with a username and password, or oauth. The user is then able
 The site will display the users with highest scores on the start page.
 
 A possible extensions to the app: user can create their own quiz and share it with the rest of the users. And a chat function with socket.io so the users can chat with each other. 
+
+The frontend repo is here: https://github.com/lauraleonilla/quiz-app-frontend
