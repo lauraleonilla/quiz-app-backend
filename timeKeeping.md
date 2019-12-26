@@ -14,6 +14,7 @@ Below the dates and number of hours worked.
 | 25.12  |     24      |  3  | Implement the first quiz on front end| 
 |        |     26      |  2  | Refactored login and registration routes| 
 |        |     27      |  1  | Started with saving also Facebook-auth users to DB| 
+| 26.12  |     28      |  1  | Fixed code to create a user to db when they register with fb.| 
 | ?????  |             |  ?  | Chat with socket.io| 
 | ?????  |             |  ?  | Custom 404 page| 
 | Total hours | 27 |         | 
