@@ -5,6 +5,7 @@ const morgan = require('morgan')
 const bodyParser = require('body-parser')
 const app = express()
 const config = require('./config')
+const middleware = require('./utils/middleware')
 
 const userRouter = require('./routes/user')
 const loginRouter = require('./routes/login')
@@ -35,5 +36,7 @@ app.use('/api/quiz', quizRouter)
 app.get('/', (req, res) => res.send('Hello World!'))
 
 app.get('/quiz', (req, res) => res.send('LOLOLOL'))
+
+app.use(middleware.unknownEndpoint)
 
 app.listen(`${config.PORT}`, () => console.log(`Example app listening on port ${config.PORT}!`))

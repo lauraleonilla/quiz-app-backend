@@ -15,6 +15,10 @@ Below the dates and number of hours worked.
 |        |  2  |     26      | Refactored login and registration routes| 
 |        |  1  |     27      | Started with saving also Facebook-auth users to DB| 
 | 26.12  |  1  |     28      | Fixed code to create a user to db when they register with fb.| 
+| 28.12  |  2  |     30      | Made a route for posting quiz scores| 
+|        |  1  |     31      | Added Error message component, refactored scss colors into a separate file| 
+|        |  1  |     32      | Using the score route in frontend and saving to db when quiz is fnished.| 
+|        |  1  |     33      | Displaying played quiz and score on user profile. | 
+|        |  2  |     35      | Made a custom 404 page, refactored profile css.| 
 | ?????  |  ?  |             | Chat with socket.io| 
-| ?????  |  ?  |             | Custom 404 page| 
-| Total hours | 27 |         | 
+| Total hours | 35 |         | 
