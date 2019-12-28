@@ -9,7 +9,7 @@ loginRouter.post('/', async (req, res) => {
   const userName = req.body.userName
   const passWord = req.body.passWord
 
-  const user = await User.findOne({ username: userName })
+  const user = await User.findOne({ username: userName }).populate('scores')
   const passwordCorrect =
     user === null
       ? false
@@ -28,7 +28,7 @@ loginRouter.post('/', async (req, res) => {
 
   const token = jwt.sign(userForToken, process.env.SECRET)
 
-  res.status(200).send({ token, username: user.username, name: user.name, id: user.id })
+  res.status(200).send({ token, username: user.username, name: user.name, id: user.id, scores: user.scores })
 })
 
 module.exports = loginRouter
