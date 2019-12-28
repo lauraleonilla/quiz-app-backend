@@ -1,6 +1,10 @@
 const mongoose = require('mongoose')
 
 const scoreSchema = mongoose.Schema({
+  quiz: {
+    type: String,
+    required: true
+  },
   score: {
     type: Number
   },

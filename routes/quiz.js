@@ -3,12 +3,14 @@ const Score = require('../models/score')
 const User = require('../models/user')
 
 quizRouter.post('/score', async (req, res, next) => {
+  const quiz = req.body.quiz
   const score = req.body.score
   const userId = req.body.userId
 
   try {
     const user = await User.findById(userId)
     const newScore = new Score({
+      quiz,
       score
     })
     const savedScore = await newScore.save()
