@@ -9,6 +9,7 @@ const config = require('./config')
 const userRouter = require('./routes/user')
 const loginRouter = require('./routes/login')
 const fbUserRouter = require('./routes/fbUser')
+const quizRouter = require('./routes/quiz')
 
 console.log('connecting to', config.MONGODB_URI)
 
@@ -29,6 +30,7 @@ morgan.token('body', (req, res) => JSON.stringify(req.body))
 app.use('/api/user', userRouter)
 app.use('/api/login', loginRouter)
 app.use('/api/fbuser', fbUserRouter)
+app.use('/api/quiz', quizRouter)
 
 app.get('/', (req, res) => res.send('Hello World!'))
 
