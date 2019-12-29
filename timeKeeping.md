@@ -20,6 +20,8 @@ Below the dates and number of hours worked.
 |             | 1    | 32         | Using the score route in frontend and saving to db when quiz is fnished.    |
 |             | 1    | 33         | Displaying played quiz and score on user profile.                           |
 |             | 2    | 35         | Made a custom 404 page, refactored profile css.                             |
-| 29.12       | 2    | 37         | Updating score with PUT request.                                            |
+| 29.12       | 2    | 37         | Updating score if user has done the quiz before.                            |
+|             | 2    | 39         | Saving FB users to same collection, saving also their quiz scores.          |
+| ?????       | ?    |            | Go through code so far and refactor.                                        |
 | ?????       | ?    |            | Chat with socket.io                                                         |
-| Total hours | 35   |            |
+| Total hours | 39   |            |

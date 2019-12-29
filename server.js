@@ -9,16 +9,19 @@ const middleware = require('./utils/middleware')
 
 const userRouter = require('./routes/user')
 const loginRouter = require('./routes/login')
-const fbUserRouter = require('./routes/fbUser')
 const quizRouter = require('./routes/quiz')
 
 console.log('connecting to', config.MONGODB_URI)
 
-mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose
+  .connect(config.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
   .then(() => {
     console.log('Connected to MongoDB')
   })
-  .catch((error) => {
+  .catch(error => {
     console.log('Error connecting to MongoDB', error.message)
   })
 
@@ -30,7 +33,6 @@ morgan.token('body', (req, res) => JSON.stringify(req.body))
 
 app.use('/api/user', userRouter)
 app.use('/api/login', loginRouter)
-app.use('/api/fbuser', fbUserRouter)
 app.use('/api/quiz', quizRouter)
 
 app.get('/', (req, res) => res.send('Hello World!'))
@@ -39,4 +41,6 @@ app.get('/quiz', (req, res) => res.send('LOLOLOL'))
 
 app.use(middleware.unknownEndpoint)
 
-app.listen(`${config.PORT}`, () => console.log(`Example app listening on port ${config.PORT}!`))
+app.listen(`${config.PORT}`, () =>
+  console.log(`Example app listening on port ${config.PORT}!`)
+)

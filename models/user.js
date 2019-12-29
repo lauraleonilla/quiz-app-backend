@@ -4,9 +4,19 @@ const uniqueValidator = require('mongoose-unique-validator')
 const userSchema = mongoose.Schema({
   username: {
     type: String,
-    required: true,
+    required: function() {
+      return !this.fbId
+    },
     minlength: 2,
     unique: true
+  },
+  fbId: {
+    type: Number,
+    minlength: 2,
+    unique: true,
+    required: function() {
+      return !this.username
+    }
   },
   name: String,
   passwordHash: String,

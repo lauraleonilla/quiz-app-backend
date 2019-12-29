@@ -18,13 +18,17 @@ usersRouter.post('/', async (req, res, next) => {
         error: 'Give a password with at least three characters'
       })
     }
-    const saltRounds = 10
-    const passwordHash = await bcrypt.hash(passWord, saltRounds)
+    let passwordHash = null
+
+    if (passWord) {
+      const saltRounds = 10
+      passwordHash = await bcrypt.hash(passWord, saltRounds)
+    }
 
     const user = new User({
       username: userName,
       name: name,
-      passwordHash,
+      passwordHash
     })
 
     const savedUser = await user.save()
