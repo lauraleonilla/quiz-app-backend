@@ -1,6 +1,5 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const http = require('http')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
 const app = express()
@@ -11,7 +10,7 @@ const userRouter = require('./routes/user')
 const loginRouter = require('./routes/login')
 const quizRouter = require('./routes/quiz')
 
-console.log('connecting to', config.MONGODB_URI)
+mongoose.set('useCreateIndex', true)
 
 mongoose
   .connect(config.MONGODB_URI, {
@@ -34,10 +33,6 @@ morgan.token('body', (req, res) => JSON.stringify(req.body))
 app.use('/api/user', userRouter)
 app.use('/api/login', loginRouter)
 app.use('/api/quiz', quizRouter)
-
-app.get('/', (req, res) => res.send('Hello World!'))
-
-app.get('/quiz', (req, res) => res.send('LOLOLOL'))
 
 app.use(middleware.unknownEndpoint)
 

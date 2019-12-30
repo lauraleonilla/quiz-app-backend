@@ -3,8 +3,6 @@ const bcrypt = require('bcrypt')
 const loginRouter = require('express').Router()
 const User = require('../models/user')
 
-loginRouter.get('/', (req, res) => res.send('This will be login page'))
-
 loginRouter.post('/', async (req, res) => {
   const userName = req.body.userName
   const passWord = req.body.passWord
@@ -15,7 +13,6 @@ loginRouter.post('/', async (req, res) => {
     const fbuser = await User.findOne({ fbId: fbId }).populate('scores')
     if (!fbuser) {
       const user = new User({
-        username: userName,
         name: name,
         fbId: fbId
       })

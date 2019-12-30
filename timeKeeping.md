@@ -22,6 +22,6 @@ Below the dates and number of hours worked.
 |             | 2    | 35         | Made a custom 404 page, refactored profile css.                             |
 | 29.12       | 2    | 37         | Updating score if user has done the quiz before.                            |
 |             | 2    | 39         | Saving FB users to same collection, saving also their quiz scores.          |
-| ?????       | ?    |            | Go through code so far and refactor.                                        |
+| 30.12       | 2    | 41         | Went through code so far and refactored.                                    |
 | ?????       | ?    |            | Chat with socket.io                                                         |
-| Total hours | 39   |            |
+| Total hours | 41   |            |

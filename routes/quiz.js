@@ -6,6 +6,7 @@ quizRouter.post('/score', async (req, res, next) => {
   const quiz = req.body.quiz
   const score = req.body.score
   const user = req.body.userId
+
   const existingScore = await Score.find({ quiz: quiz, user: user })
 
   if (existingScore && existingScore.length) {
@@ -14,9 +15,7 @@ quizRouter.post('/score', async (req, res, next) => {
       const updatedScore = await Score.findOneAndUpdate(
         filter,
         { score: score },
-        {
-          new: true
-        }
+        { new: true }
       )
       res.json(updatedScore.toJSON())
     } catch (exception) {
