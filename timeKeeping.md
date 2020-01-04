@@ -23,5 +23,8 @@ Below the dates and number of hours worked.
 | 29.12       | 2    | 37         | Updating score if user has done the quiz before.                            |
 |             | 2    | 39         | Saving FB users to same collection, saving also their quiz scores.          |
 | 30.12       | 2    | 41         | Went through code so far and refactored.                                    |
+| 4.1         | 5    | 46         | Added more quizzes. rendering dynamically instead of hard coded.            |
+|             | 2    | 48         | Required tokens on score update requests.                                   |
+|             | 1    | 49         | Fixed frontend bugs, refactored.                                            |
 | ?????       | ?    |            | Chat with socket.io                                                         |
-| Total hours | 41   |            |
+| Total hours | 49   |            |
