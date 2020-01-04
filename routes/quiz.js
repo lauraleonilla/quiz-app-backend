@@ -1,11 +1,18 @@
 const quizRouter = require('express').Router()
 const Score = require('../models/score')
 const User = require('../models/user')
+const jwt = require('jsonwebtoken')
 
 quizRouter.post('/score', async (req, res, next) => {
   const quiz = req.body.quiz
   const score = req.body.score
   const user = req.body.userId
+  const token = req.token
+  const decodedToken = jwt.verify(token, process.env.SECRET)
+
+  if (!token || !decodedToken.id) {
+    return res.status(401).json({ error: 'Token missing or invalid' })
+  }
 
   const existingScore = await Score.find({ quiz: quiz, user: user })
 
@@ -17,7 +24,7 @@ quizRouter.post('/score', async (req, res, next) => {
         { score: score },
         { new: true }
       )
-      res.json(updatedScore.toJSON())
+      res.json({ message: 'Score updated', newScore: updatedScore })
     } catch (exception) {
       next(exception)
     }

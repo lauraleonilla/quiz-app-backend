@@ -30,6 +30,8 @@ app.use(
 )
 morgan.token('body', (req, res) => JSON.stringify(req.body))
 
+app.use(middleware.tokenExtractor)
+
 app.use('/api/user', userRouter)
 app.use('/api/login', loginRouter)
 app.use('/api/quiz', quizRouter)
