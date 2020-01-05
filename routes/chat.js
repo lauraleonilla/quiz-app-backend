@@ -1,15 +1,20 @@
-const chatRouter = require('express').Router()
+const chatRouter = require('express.io')()
 const ChatMessage = require('../models/chatMessage')
 const User = require('../models/user')
 const jwt = require('jsonwebtoken')
 
-chatRouter.get('/', async (req, res, next) => {
-  try {
-    const messages = await ChatMessage.find({})
-    res.json(messages.map(message => message.toJSON()))
-  } catch (exception) {
-    next(exception)
-  }
+chatRouter.http().io()
+
+chatRouter.get('/', function(req, res) {
+  req.io.route('hello')
+})
+
+chatRouter.io.route('hello', function(req) {
+  req.io.route('hello-again')
+})
+
+chatRouter.io.route('hello-again', function(req) {
+  req.io.respond({ hello: 'from io route' })
 })
 
 chatRouter.post('/', async (req, res, next) => {
