@@ -26,5 +26,6 @@ Below the dates and number of hours worked.
 | 4.1         | 5    | 46         | Added more quizzes. rendering dynamically instead of hard coded.            |
 |             | 2    | 48         | Required tokens on score update requests.                                   |
 |             | 1    | 49         | Fixed frontend bugs, refactored.                                            |
+| 5.1         | 2    | 51         | Refactored api, fixed bugs.                                                 |
 | ?????       | ?    |            | Chat with socket.io                                                         |
-| Total hours | 49   |            |
+| Total hours | 51   |            |

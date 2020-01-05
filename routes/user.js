@@ -3,18 +3,18 @@ const usersRouter = require('express').Router()
 const User = require('../models/user')
 
 usersRouter.post('/', async (req, res, next) => {
-  try {
-    const userName = req.body.userName
-    const name = req.body.name
-    const passWord = req.body.passWord
+  const userName = req.body.userName
+  const name = req.body.name
+  const passWord = req.body.passWord
 
+  try {
     if (!passWord || passWord.length < 3) {
       return res.status(400).json({
         error: 'Give a password with at least three characters'
       })
     }
-    let passwordHash = null
 
+    let passwordHash = null
     if (passWord) {
       const saltRounds = 10
       passwordHash = await bcrypt.hash(passWord, saltRounds)
@@ -27,10 +27,9 @@ usersRouter.post('/', async (req, res, next) => {
     })
 
     const savedUser = await user.save()
-
     res.json(savedUser)
-  } catch (exception) {
-    next(exception)
+  } catch (error) {
+    res.status(500).json({ messsage: 'Error with creating a user' })
   }
 })
 
