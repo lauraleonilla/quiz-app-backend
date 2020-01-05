@@ -5,12 +5,12 @@ const jwt = require('jsonwebtoken')
 
 chatRouter.http().io()
 
-chatRouter.get('/', function(req, res) {
+chatRouter.get('/', async (req, res) => {
   req.io.route('hello')
 })
 
-chatRouter.io.route('hello', function(req) {
-  req.io.route('hello-again')
+chatRouter.io.route('hello', function(event, data) {
+  chatRouter.io.broadcast(event, data)
 })
 
 chatRouter.io.route('hello-again', function(req) {
@@ -33,6 +33,7 @@ chatRouter.post('/', async (req, res, next) => {
     const savedMessage = await newMessage.save()
     user.messages = user.messages.concat(savedMessage._id)
     await user.save()
+    req.io.route('hello')
     res.json(savedMessage.toJSON())
   } catch (exception) {
     next(exception)

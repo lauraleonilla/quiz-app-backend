@@ -29,5 +29,6 @@ Below the dates and number of hours worked.
 | 5.1         | 2    | 51         | Refactored api, fixed bugs.                                                 |
 |             | 1    | 52         | Fixed state bugs on frontend.                                               |
 |             | 2    | 54         | Setup an endpoint for chat messages.                                        |
-| ?????       | ?    |            | Chat with socket.io                                                         |
-| Total hours | 54   |            |
+|             | 5    | 59         | Started building and testing a chat feature with express.io                 |
+| 6.1         | 8    | 67         | Finish chat                                                                 |
+| Total hours | 59   |            |
