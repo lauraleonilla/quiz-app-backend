@@ -27,5 +27,7 @@ Below the dates and number of hours worked.
 |             | 2    | 48         | Required tokens on score update requests.                                   |
 |             | 1    | 49         | Fixed frontend bugs, refactored.                                            |
 | 5.1         | 2    | 51         | Refactored api, fixed bugs.                                                 |
+|             | 1    | 52         | Fixed state bugs on frontend.                                               |
+|             | 2    | 54         | Setup an endpoint for chat messages.                                        |
 | ?????       | ?    |            | Chat with socket.io                                                         |
-| Total hours | 51   |            |
+| Total hours | 54   |            |

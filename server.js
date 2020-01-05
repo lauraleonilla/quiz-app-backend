@@ -9,6 +9,7 @@ const middleware = require('./utils/middleware')
 const userRouter = require('./routes/user')
 const loginRouter = require('./routes/login')
 const quizRouter = require('./routes/quiz')
+const chatRouter = require('./routes/chat')
 
 mongoose.set('useCreateIndex', true)
 
@@ -35,6 +36,7 @@ app.use(middleware.tokenExtractor)
 app.use('/api/user', userRouter)
 app.use('/api/login', loginRouter)
 app.use('/api/quiz', quizRouter)
+app.use('/api/chat', chatRouter)
 
 app.use(middleware.unknownEndpoint)
 
