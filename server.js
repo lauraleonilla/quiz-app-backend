@@ -1,8 +1,7 @@
-const express = require('express')
+const app = require('express.io')()
 const mongoose = require('mongoose')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
-const app = express()
 const config = require('./config')
 const middleware = require('./utils/middleware')
 
@@ -10,6 +9,8 @@ const userRouter = require('./routes/user')
 const loginRouter = require('./routes/login')
 const quizRouter = require('./routes/quiz')
 const chatRouter = require('./routes/chat')
+
+app.http().io()
 
 mongoose.set('useCreateIndex', true)
 
