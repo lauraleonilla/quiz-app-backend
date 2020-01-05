@@ -1,4 +1,4 @@
-const express = require('express')
+const express = require('express.io')()
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
@@ -12,6 +12,8 @@ const quizRouter = require('./routes/quiz')
 const chatRouter = require('./routes/chat')
 
 const app = express()
+  .http()
+  .io()
 
 mongoose.set('useCreateIndex', true)
 
