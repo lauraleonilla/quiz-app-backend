@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken')
 
 chatRouter.get('/', async (req, res, next) => {
   try {
-    const messages = await ChatMessage.find({})
+    const messages = await ChatMessage.find({}).populate('user')
     res.json(messages.map(message => message.toJSON()))
   } catch (exception) {
     next(exception)
