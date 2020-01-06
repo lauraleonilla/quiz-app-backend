@@ -33,4 +33,7 @@ Below the dates and number of hours worked.
 | 6.1         | 2    | 61         | Express.io didn't work, so implemented the chat without sockets for now.    |
 |             | 2    | 63         | Fixed the design of the chat feature in frontend.                           |
 |             | 1    | 64         | Fixed the timestamp format with moment.js.                                  |
-| Total hours | 64   |            |
+|             | 1    | 65         | Refactored styling.                                                         |
+|             | 1    | 66         | Refactored tokens in frontend to come from store.                           |
+|             | 1    | 67         | Started looking into socket.io for displaying realtime chat data.           |
+| Total hours | 67   |            |
