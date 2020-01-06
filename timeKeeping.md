@@ -30,5 +30,6 @@ Below the dates and number of hours worked.
 |             | 1    | 52         | Fixed state bugs on frontend.                                               |
 |             | 2    | 54         | Setup an endpoint for chat messages.                                        |
 |             | 5    | 59         | Started building and testing a chat feature with express.io                 |
-| 6.1         | 8    | 67         | Finish chat                                                                 |
+| 6.1         | 2    | 61         | Express.io didn't work, so implemented the chat without sockets for now.    |
+|             | 2    | 63         | Fixed the design of the chat feature in frontend.                           |
 | Total hours | 59   |            |
