@@ -32,4 +32,5 @@ Below the dates and number of hours worked.
 |             | 5    | 59         | Started building and testing a chat feature with express.io                 |
 | 6.1         | 2    | 61         | Express.io didn't work, so implemented the chat without sockets for now.    |
 |             | 2    | 63         | Fixed the design of the chat feature in frontend.                           |
-| Total hours | 59   |            |
+|             | 1    | 64         | Fixed the timestamp format with moment.js.                                  |
+| Total hours | 64   |            |

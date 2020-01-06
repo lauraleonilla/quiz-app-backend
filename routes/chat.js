@@ -14,6 +14,7 @@ chatRouter.get('/', async (req, res, next) => {
 
 chatRouter.post('/', async (req, res, next) => {
   const message = req.body.message
+  const time = req.body.time
   const token = req.token
   try {
     const decodedToken = jwt.verify(token, process.env.SECRET)
@@ -23,6 +24,7 @@ chatRouter.post('/', async (req, res, next) => {
     const user = await User.findById(decodedToken.id)
     const newMessage = new ChatMessage({
       message: message,
+      time: time,
       user: user._id
     })
     const savedMessage = await newMessage.save()

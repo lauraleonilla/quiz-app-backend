@@ -5,11 +5,11 @@ const chatMessageSchema = mongoose.Schema({
     type: String,
     required: true
   },
+  time: { type: Number },
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
-  },
-  time: { type: Date, default: Date.now }
+  }
 })
 
 chatMessageSchema.set('toJSON', {
