@@ -1,20 +1,15 @@
-const chatRouter = require('express.io')()
+const chatRouter = require('express').Router()
 const ChatMessage = require('../models/chatMessage')
 const User = require('../models/user')
 const jwt = require('jsonwebtoken')
 
-chatRouter.http().io()
-
-chatRouter.get('/', async (req, res) => {
-  req.io.route('hello')
-})
-
-chatRouter.io.route('hello', function(event, data) {
-  chatRouter.io.broadcast(event, data)
-})
-
-chatRouter.io.route('hello-again', function(req) {
-  req.io.respond({ hello: 'from io route' })
+chatRouter.get('/', async (req, res, next) => {
+  try {
+    const messages = await ChatMessage.find({})
+    res.json(messages.map(message => message.toJSON()))
+  } catch (exception) {
+    next(exception)
+  }
 })
 
 chatRouter.post('/', async (req, res, next) => {
@@ -33,7 +28,6 @@ chatRouter.post('/', async (req, res, next) => {
     const savedMessage = await newMessage.save()
     user.messages = user.messages.concat(savedMessage._id)
     await user.save()
-    req.io.route('hello')
     res.json(savedMessage.toJSON())
   } catch (exception) {
     next(exception)
