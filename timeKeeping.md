@@ -36,4 +36,7 @@ Below the dates and number of hours worked.
 |             | 1    | 65         | Refactored styling.                                                         |
 |             | 1    | 66         | Refactored tokens in frontend to come from store.                           |
 |             | 1    | 67         | Started looking into socket.io for displaying realtime chat data.           |
-| Total hours | 67   |            |
+| 11.1        | 1    | 68         | Fixed broken css on the chat page.                                          |
+|             | 3    | 71         | Made a page where user can add their own quiz.                              |
+|             | 2    | 73         | Refactored the ownQuiz page into smaller components, added css.             |
+| Total hours | 73   |            |
