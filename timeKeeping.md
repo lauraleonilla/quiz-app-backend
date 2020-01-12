@@ -39,4 +39,5 @@ Below the dates and number of hours worked.
 | 11.1        | 1    | 68         | Fixed broken css on the chat page.                                          |
 |             | 3    | 71         | Made a page where user can add their own quiz.                              |
 |             | 2    | 73         | Refactored the ownQuiz page into smaller components, added css.             |
-| Total hours | 73   |            |
+| 12.1        | 2    | 75         | Made a form for boolean quizzes, rendering the one user selected.           |
+| Total hours | 75   |            |
