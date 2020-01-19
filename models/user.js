@@ -31,6 +31,12 @@ const userSchema = mongoose.Schema({
       type: mongoose.Schema.Types.ObjectId,
       ref: 'ChatMessage'
     }
+  ],
+  booleanQuizzes: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'BooleanQuiz'
+    }
   ]
 })
 

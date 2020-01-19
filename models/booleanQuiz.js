@@ -1,14 +1,24 @@
 const mongoose = require('mongoose')
 
 const booleanSchma = mongoose.Schema({
-  quizContent: [
+  quizTitle: {
+    type: String,
+    required: true,
+    minlength: 5
+  },
+  questions: [
     {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Question'
+      question: {
+        type: String,
+        required: true,
+        minlength: 5
+      },
+      correctAnswer: {
+        type: Boolean,
+        required: true
+      }
     }
   ],
-  name: String,
-  passwordHash: String,
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
