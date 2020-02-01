@@ -42,4 +42,6 @@ Below the dates and number of hours worked.
 | 12.1        | 2    | 75         | Made a form for boolean quizzes, rendering the one user selected.           |
 | 19.1        | 2    | 77         | Rendering selected number of answer fields on multi-choice quizzes.         |
 |             | 2    | 79         | Made backend for saving boolean quizzes, implemented this in frontend too.  |
+| 1.2         | 1    | 80         | Improved error handling in frontend.                                        |
+|             | 1    | 81         | Fixed backend for multiple choice quizzes.                                  |
 | Total hours | 79   |            |

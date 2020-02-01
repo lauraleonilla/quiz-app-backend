@@ -12,6 +12,7 @@ const loginRouter = require('./routes/login')
 const quizRouter = require('./routes/quiz')
 const chatRouter = require('./routes/chat')
 const booleanQuizRouter = require('./routes/ownBoleanQuiz')
+const multiQuizRouter = require('./routes/ownMultiQuiz')
 
 mongoose.set('useCreateIndex', true)
 
@@ -40,6 +41,7 @@ app.use('/api/login', loginRouter)
 app.use('/api/quiz', quizRouter)
 app.use('/api/chat', chatRouter)
 app.use('/api/booleanQuiz', booleanQuizRouter)
+app.use('/api/multiQuiz', multiQuizRouter)
 
 app.use(middleware.unknownEndpoint)
 
