@@ -44,4 +44,7 @@ Below the dates and number of hours worked.
 |             | 2    | 79         | Made backend for saving boolean quizzes, implemented this in frontend too.  |
 | 1.2         | 1    | 80         | Improved error handling in frontend.                                        |
 |             | 1    | 81         | Fixed backend for multiple choice quizzes.                                  |
-| Total hours | 79   |            |
+|             | 1    | 82         | Fixed frontend posting for multiple choice quizzes.                         |
+|             | 3    | 85         | Fixed the format of quiz, fixed how state handles data.                     |
+|             | 1    | 86         | Did small fixes and refactored frontend.                                    |
+| Total hours | 86   |            |

@@ -4,21 +4,21 @@ const multiChoiceSchma = mongoose.Schema({
   quizTitle: {
     type: String,
     required: true,
-    minlength: 5
+    minlength: 3
   },
   questions: [
     {
       question: {
         type: String,
         required: true,
-        minlength: 5
+        minlength: 2
       },
       answers: [
         {
           answer: {
             type: String,
             required: true,
-            minlength: 5,
+            minlength: 1,
             correct: Boolean
           }
         }
