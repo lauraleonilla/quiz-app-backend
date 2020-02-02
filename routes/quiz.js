@@ -1,7 +1,17 @@
 const quizRouter = require('express').Router()
 const Score = require('../models/score')
+const MultiQuiz = require('../models/multipleChoiceQuiz')
 const User = require('../models/user')
 const jwt = require('jsonwebtoken')
+
+quizRouter.get('/', async (req, res, next) => {
+  try {
+    const quizTopics = await MultiQuiz.find({}, { quizTitle: 1 })
+    res.json(quizTopics.map(topic => topic.toJSON()))
+  } catch (exception) {
+    next(exception)
+  }
+})
 
 quizRouter.post('/score', async (req, res, next) => {
   const quiz = req.body.quiz
