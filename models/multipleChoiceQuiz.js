@@ -8,6 +8,11 @@ const multiChoiceSchma = mongoose.Schema({
   },
   questions: [
     {
+      type: {
+        type: String,
+        required: true,
+        default: 'multiple'
+      },
       question: {
         type: String,
         required: true,

@@ -18,6 +18,24 @@ quizRouter.get('/', async (req, res, next) => {
   }
 })
 
+quizRouter.get('/userQuiz/boolean/:id', async (req, res, next) => {
+  try {
+    const booleanQuiz = await BooleanQuiz.findOne({ _id: req.params.id })
+    res.send(booleanQuiz)
+  } catch (exception) {
+    next(exception)
+  }
+})
+
+quizRouter.get('/userQuiz/multiple/:id', async (req, res, next) => {
+  try {
+    const multipleChoiceQuiz = await MultiQuiz.findOne({ _id: req.params.id })
+    res.send(multipleChoiceQuiz)
+  } catch (exception) {
+    next(exception)
+  }
+})
+
 quizRouter.post('/score', async (req, res, next) => {
   const quiz = req.body.quiz
   const score = req.body.score

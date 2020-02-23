@@ -48,4 +48,6 @@ Below the dates and number of hours worked.
 |             | 3    | 85         | Fixed the format of quiz, fixed how state handles data.                       |
 |             | 1    | 86         | Did small fixes and refactored frontend.                                      |
 | 2.2         | 2    | 88         | Made an endpoint for fetching user generated topics, implemented in frontend. |
-| Total hours | 88   |            |
+| 22.2        | 1    | 89         | Fixed backend for fetching user generated quizzes.                            |
+| 23.2        | 2    | 91         | Rendering user generated quizzes.                                             |
+| Total hours | 91   |            |

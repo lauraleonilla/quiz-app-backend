@@ -8,6 +8,11 @@ const booleanSchma = mongoose.Schema({
   },
   questions: [
     {
+      type: {
+        type: String,
+        required: true,
+        default: 'boolean'
+      },
       question: {
         type: String,
         required: true,
