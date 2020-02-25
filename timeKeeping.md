@@ -50,4 +50,8 @@ Below the dates and number of hours worked.
 | 2.2         | 2    | 88         | Made an endpoint for fetching user generated topics, implemented in frontend. |
 | 22.2        | 1    | 89         | Fixed backend for fetching user generated quizzes.                            |
 | 23.2        | 2    | 91         | Rendering user generated quizzes.                                             |
-| Total hours | 91   |            |
+| 23.2        | 1    | 92         | Fixed frontend bugs.                                                          |
+| 25.2        | 2    | 93         | Fixed profile page and frontend bugs.                                         |
+| xx.x        | x    | xx         | TEST.                                                                         |
+| xx.x        | x    | xx         | DEPLOY.                                                                       |
+| Total hours | 93   |            |

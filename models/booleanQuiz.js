@@ -19,7 +19,7 @@ const booleanSchma = mongoose.Schema({
         minlength: 5
       },
       correctAnswer: {
-        type: Boolean,
+        type: String,
         required: true
       }
     }
