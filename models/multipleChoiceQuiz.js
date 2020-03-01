@@ -19,7 +19,7 @@ const multiChoiceSchma = mongoose.Schema({
         minlength: 2
       },
       correctAnswer: {
-        type: String,
+        type: Object,
         required: true,
         minlength: 1
       },
@@ -28,8 +28,7 @@ const multiChoiceSchma = mongoose.Schema({
           answer: {
             type: String,
             required: true,
-            minlength: 1,
-            correct: Boolean
+            minlength: 1
           }
         }
       ]

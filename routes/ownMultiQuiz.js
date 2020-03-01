@@ -20,7 +20,7 @@ ownMultiQuiz.post('/', async (req, res, next) => {
     })
     try {
       const savedQuiz = await newQuiz.save()
-      user.booleanQuizzes = user.booleanQuizzes.concat(savedQuiz._id)
+      user.multiQuizzes = user.multiQuizzes.concat(savedQuiz._id)
       await user.save()
       res.json(savedQuiz.toJSON())
     } catch (error) {

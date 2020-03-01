@@ -37,6 +37,12 @@ const userSchema = mongoose.Schema({
       type: mongoose.Schema.Types.ObjectId,
       ref: 'BooleanQuiz'
     }
+  ],
+  multiQuizzes: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'MultiChoiceQuiz'
+    }
   ]
 })
 
