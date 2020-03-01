@@ -52,6 +52,6 @@ Below the dates and number of hours worked.
 | 23.2        | 2    | 91         | Rendering user generated quizzes.                                             |
 | 23.2        | 1    | 92         | Fixed frontend bugs.                                                          |
 | 25.2        | 2    | 93         | Fixed profile page and frontend bugs.                                         |
-| xx.x        | x    | xx         | TEST.                                                                         |
+| 1.3         | 3    | 96         | Fixed user generated multiple choice quizzes.                                 |
 | xx.x        | x    | xx         | DEPLOY.                                                                       |
 | Total hours | 93   |            |
