@@ -18,6 +18,11 @@ const multiChoiceSchma = mongoose.Schema({
         required: true,
         minlength: 2
       },
+      correctAnswer: {
+        type: String,
+        required: true,
+        minlength: 1
+      },
       answers: [
         {
           answer: {
