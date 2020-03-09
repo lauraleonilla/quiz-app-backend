@@ -54,4 +54,5 @@ Below the dates and number of hours worked.
 | 25.2        | 2    | 93         | Fixed profile page and frontend bugs.                                         |
 | 1.3         | 3    | 96         | Fixed user generated multiple choice quizzes.                                 |
 | 8.3         | 3    | 99         | Fixed bugs, tested, started deploying.                                        |
-| Total hours | 102  |            |
+| 9.3         | 1    | 100        | Deployed, started final testing.                                              |
+| Total hours | 100  |            |
