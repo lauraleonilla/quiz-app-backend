@@ -13,6 +13,9 @@ const quizRouter = require('./routes/quiz')
 const chatRouter = require('./routes/chat')
 const booleanQuizRouter = require('./routes/ownBoleanQuiz')
 const multiQuizRouter = require('./routes/ownMultiQuiz')
+const path = require('path')
+
+app.use(express.static(path.join(__dirname, 'build')))
 
 mongoose.set('useCreateIndex', true)
 
