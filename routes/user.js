@@ -26,8 +26,8 @@ usersRouter.post('/', async (req, res, next) => {
       passwordHash
     })
 
-    const savedUser = await user.save()
-    res.json(savedUser)
+    await user.save()
+    res.json(user.toJSON())
   } catch (error) {
     res.status(500).json({ messsage: 'Error with creating a user' })
   }
