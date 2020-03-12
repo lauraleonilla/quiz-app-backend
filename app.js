@@ -45,8 +45,8 @@ app.use('/api/quiz', quizRouter)
 app.use('/api/chat', chatRouter)
 app.use('/api/booleanQuiz', booleanQuizRouter)
 app.use('/api/multiQuiz', multiQuizRouter)
-app.get('/*', function(req, res) {
-  res.sendFile('./build/index.html')
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/build/index.html'))
 })
 app.use(middleware.unknownEndpoint)
 
