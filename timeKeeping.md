@@ -53,5 +53,7 @@ Below the dates and number of hours worked.
 | 23.2        | 1    | 92         | Fixed frontend bugs.                                                          |
 | 25.2        | 2    | 93         | Fixed profile page and frontend bugs.                                         |
 | 1.3         | 3    | 96         | Fixed user generated multiple choice quizzes.                                 |
-| xx.x        | x    | xx         | DEPLOY.                                                                       |
-| Total hours | 93   |            |
+| 8.3         | 3    | 99         | Fixed bugs, tested, started deploying.                                        |
+| 9.3         | 1    | 100        | Deployed, started final testing.                                              |
+| 12.3        | 1    | 101        | Fixed frontend routing to work in heroku.                                     |
+| Total hours | 101  |            |
